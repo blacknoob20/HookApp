@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HookApp } from './HookApp';
+import { CounterApp } from './components/01-useState/CounterApp';
+// import { HookApp } from './HookApp';
 
 ReactDOM.render(
-  <HookApp />,
+  <CounterApp />,
+  // <HookApp />,
   document.getElementById('root')
 );
