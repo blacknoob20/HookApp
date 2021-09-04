@@ -4,26 +4,36 @@ import { Message } from './Message';
 import './effect.css';
 
 export const SimpleForm = () => {
+
+    // Mala practica: poner dentro de condicionales hooks
+    // por eso siempre se los ponen en la parte superior como
+    // una declaracion de variables
+
     const [formState, setFormState] = useState({
         name: '',
         email: ''
     });
 
-    const {name, email} = formState;
+    const { name, email } = formState;
 
-    useEffect(() =>{
+    // Buenas practicas: los useEffect deben ser trabajados de forma indiviual
+    
+    // Este useEffect  se dispara cuando entramos por primera vez a la pagina
+    // se lo usa normalmente como inicializador de variables
+    useEffect(() => {
         // console.log('hey!');
-    },[]);
-
-    useEffect(() =>{
+    }, []);
+    
+    // Este useEffect monitorea los cambios de todo el formulario
+    useEffect(() => {
         // console.log('formState cambió');
-    },[formState]);
+    }, [formState]);
 
-    useEffect(() =>{
+    useEffect(() => {
         // console.log('email cambió');
-    },[email]);
+    }, [email]);
 
-    const handleInputChange = ({target}) => {
+    const handleInputChange = ({ target }) => {
         // console.log(e.target);
         setFormState({
             ...formState,
@@ -34,7 +44,7 @@ export const SimpleForm = () => {
     return (
         <div>
             <h1>useEffect</h1>
-            <hr/>
+            <hr />
             <div className="form-group">
                 <input
                     type="text"
@@ -54,7 +64,7 @@ export const SimpleForm = () => {
                     value={email}
                     onChange={handleInputChange}
                 />
-                {name === '123' && <Message/>}
+                {name === '123' && <Message />}
             </div>
         </div>
     )
