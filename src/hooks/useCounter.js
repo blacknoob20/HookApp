@@ -7,12 +7,12 @@ export const useCounter = (initialState = 10) => {
         setCounter(initialState);
     }
 
-    const increment = () =>{
-        setCounter(counter + 1);
+    const increment = (factor =1) =>{
+        setCounter(counter + factor);
     }
 
-    const decrement = () => {
-        setCounter(counter -1);
+    const decrement = (factor =1) => {
+        setCounter(counter -factor);
     }
 
     return {
@@ -22,3 +22,4 @@ export const useCounter = (initialState = 10) => {
         reset,
     };
 }
+ 

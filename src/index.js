@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Padre } from './components/07-tarea-memo/Padre';
+// import { Padre } from './components/07-tarea-memo/Padre';
 // import { MemoHook } from './components/06-memo/MemoHook';
 // import { Layout } from './components/05-useLayoutEffect/Layout';
 // import { Memorize } from './components/06-memo/Memorize';
@@ -9,12 +9,12 @@ import { Padre } from './components/07-tarea-memo/Padre';
 // import { FocusScreen } from './components/04-useRef/FocusScreen';
 // import { RealExampleRef } from './components/04-useRef/RealExampleRef';
 // import { CounterApp } from './components/01-useState/CounterApp';
-// import { CounterWithCustomHook } from './components/01-useState/CounterWithCustomHook';
+import { CounterWithCustomHook } from './components/01-useState/CounterWithCustomHook';
 // import { SimpleForm } from './components/02-useEffect/SimpleForm';
 // import { HookApp } from './HookApp';
 
 ReactDOM.render(
-  <Padre />,
+  // <Padre />,
   // <MemoHook />,
   // <Memorize />,
   // <Layout />,
@@ -23,8 +23,8 @@ ReactDOM.render(
   // <MultipleCustomHooks />,
   // <FormWithCustomHook />,
   // <SimpleForm />,
-  // <CounterWithCustomHook />,
+  <CounterWithCustomHook />,
   // <CounterApp />,
   // <HookApp />,
   document.getElementById('root')
-);
+); 
