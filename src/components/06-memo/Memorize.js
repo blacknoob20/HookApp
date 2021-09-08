@@ -13,7 +13,7 @@ const [show, setShow] = useState(true);
             <h1>Memorize</h1>
             <h2>Contador: <Small value={counter}/></h2>
             <hr/>
-            <button className="btn btn-primary" onClick={increment}>+1</button>&nbsp;
+            <button className="btn btn-primary" onClick={()=> increment(1)}>+1</button>&nbsp;
             <button
                 className="btn btn-outline-primary"
                 onClick={()=>{
