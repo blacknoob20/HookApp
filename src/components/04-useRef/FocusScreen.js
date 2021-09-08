@@ -22,8 +22,7 @@ export const FocusScreen = () => {
                 className="form-control"
                 placeholder="Su nombre"
             />
-            <br></br>
-            <button className="btn btn-outline-primary" onClick={handleClick}>Focus</button>
+            <button className="btn btn-outline-primary mt-5" onClick={handleClick}>Focus</button>
         </div>
     )
 }

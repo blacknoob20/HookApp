@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { MultipleCustomHooks } from '../03-examples/MultipleCustomHooks';
 
 import '../02-useEffect/effect.css';
-import { useRef } from 'react/cjs/react.production.min';
 
 export const RealExampleRef = () => {
     const [show, setShow] = useState(false);
