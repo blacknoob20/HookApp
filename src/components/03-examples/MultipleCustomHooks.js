@@ -5,31 +5,28 @@ import { useFetch } from '../../hooks/useFetch';
 import '../02-useEffect/effect.css';
 
 export const MultipleCustomHooks = () => {
-    const {counter, increment} = useCounter(1);
+    const { counter, increment } = useCounter(1);
 
     const { loading, data } = useFetch(`https://www.breakingbadapi.com/api/quotes/${counter}`);
-    // const { loading, data } = useFetch(`https://www.breakingbadapi.com/api/quotes/1`);
     const { author, quote } = !!data && data[0];
 
     return (
         <div>
             <h1>BreakingBad Quotes</h1>
-            <hr/>
+            <hr />
             {
                 loading
-                ?
-                    (
-                        <div className="alert alert-info text-center">Loading...</div>
-                    )
-                :
+                    ?
+                    (<div className="alert alert-info text-center">Loading...</div>)
+                    :
                     (
                         <blockquote className="blockquote text-end">
-                            <p className="mb-0">{quote}</p><br/>
+                            <p className="mb-0">{quote}</p><br />
                             <footer className="fs-6 text blockquote-footer">{author}</footer>
                         </blockquote>
                     )
             }
-            <button className="btn btn-primary" onClick={ increment }>Sig. Quote {counter}</button>
+            <button className="btn btn-primary" onClick={() => increment(1)}>Sig. Quote {counter}</button>
         </div>
     )
 }
