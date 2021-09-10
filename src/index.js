@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// import { CallbackHook } from './components/06-memo/CallbackHook';
 // import { Padre } from './components/07-tarea-memo/Padre';
 import { MemoHook } from './components/06-memo/MemoHook';
 // import { Layout } from './components/05-useLayoutEffect/Layout';
@@ -15,6 +16,7 @@ import { MemoHook } from './components/06-memo/MemoHook';
 
 ReactDOM.render(
   // <Padre />,
+  // <CallbackHook/>,
   <MemoHook />,
   // <Memorize />,
   // <Layout />,
