@@ -1,6 +1,8 @@
-import React, { useCallback } from 'react'
-import { Hijo } from './Hijo'
+import React, { useCallback } from 'react';
+import { Hijo } from './Hijo';
 import { useState } from 'react';
+
+import '../02-useEffect/effect.css';
  
 export const Padre = () => {
 

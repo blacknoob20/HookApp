@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import { CallbackHook } from './components/06-memo/CallbackHook';
-// import { Padre } from './components/07-tarea-memo/Padre';
-import { MemoHook } from './components/06-memo/MemoHook';
+import { Padre } from './components/07-tarea-memo/Padre';
+// import { MemoHook } from './components/06-memo/MemoHook';
 // import { Layout } from './components/05-useLayoutEffect/Layout';
 // import { Memorize } from './components/06-memo/Memorize';
 // import { FormWithCustomHook } from './components/02-useEffect/FormWithCustomHook';
@@ -15,9 +15,9 @@ import { MemoHook } from './components/06-memo/MemoHook';
 // import { HookApp } from './HookApp';
 
 ReactDOM.render(
-  // <Padre />,
+  <Padre />,
   // <CallbackHook/>,
-  <MemoHook />,
+  // <MemoHook />,
   // <Memorize />,
   // <Layout />,
   // <RealExampleRef />,
