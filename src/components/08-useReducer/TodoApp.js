@@ -15,6 +15,13 @@ export const TodoApp = () => {
         localStorage.setItem('todos', JSON.stringify(todos));
     }, [todos]);
 
+    const handleDelete = todoId => {
+        console.log(todoId);
+        const action = { type: 'del', payload: todoId };
+        
+        dispatch(action);
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -43,7 +50,7 @@ export const TodoApp = () => {
                                 todos.map((todo, i) => (
                                     <li key={todo.id} className="list-group-item">
                                         <span className="text-center">{i + 1}. {todo.desc}</span>
-                                        <button className="btn btn-danger mx-3">Borrar</button>
+                                        <button onClick={e => handleDelete(todo.id)} className="btn btn-danger mx-3">Borrar</button>
                                     </li>
                                 ))
                             }
