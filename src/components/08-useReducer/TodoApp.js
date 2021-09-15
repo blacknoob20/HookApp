@@ -18,9 +18,11 @@ export const TodoApp = () => {
     const handleDelete = todoId => {
         console.log(todoId);
         const action = { type: 'del', payload: todoId };
-        
+
         dispatch(action);
-    }
+    };
+
+    const handleToggle = todoId => dispatch({ type: 'tog', payload: todoId });
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -49,7 +51,7 @@ export const TodoApp = () => {
                             {
                                 todos.map((todo, i) => (
                                     <li key={todo.id} className="list-group-item">
-                                        <span className="text-center">{i + 1}. {todo.desc}</span>
+                                        <span onClick={e => handleToggle(todo.id)} className={`${todo.done && 'complete'}`}>{i + 1}. {todo.desc}</span>
                                         <button onClick={e => handleDelete(todo.id)} className="btn btn-danger mx-3">Borrar</button>
                                     </li>
                                 ))
