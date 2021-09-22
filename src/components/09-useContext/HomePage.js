@@ -2,14 +2,15 @@ import React, { useContext } from 'react';
 import { UserContext } from './UserContext';
 
 export const HomePage = () => {
-    const userContext = useContext(UserContext);
+    const { user } = useContext(UserContext);
 
-    console.log(userContext);
+    console.log(user);
 
     return (
         <div>
             <h1>Home Page</h1>
-            <hr/>
+            <hr />
+            <pre>{JSON.stringify(user,null,3)}</pre>
         </div>
     )
 }
