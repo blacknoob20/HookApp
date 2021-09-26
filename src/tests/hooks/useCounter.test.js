@@ -1,5 +1,4 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import { reset } from 'enzyme/build/configuration';
 import { useCounter } from '../../hooks/useCounter';
 
 describe('Pruebas en useCounter', () => {
