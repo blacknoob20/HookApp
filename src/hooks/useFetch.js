@@ -24,6 +24,13 @@ export const useFetch = (url) => {
                         data
                     });
                 } else { console.log('No se llamó el quote'); }
+            })
+            .catch(()=>{
+                setState({
+                    data: null,
+                    loading: false,
+                    error: 'No se pudo cargar la info'
+                });
             });
     }, [url]);
 
